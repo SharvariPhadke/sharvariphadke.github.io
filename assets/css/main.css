@@ -19,10 +19,10 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #02092d; /* Background color for the entire website, including individual sections */
+  --background-color: #020517; /* Background color for the entire website, including individual sections */
   --default-color: #fafafa; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5814d5; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #55118a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #1a1a1a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffffdb; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -1202,9 +1202,9 @@ span class="underlight"
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# projects Section
 --------------------------------------------------------------*/
-.services .service-item {
+.projects .service-item {
   background-color: var(--surface-color);
   padding: 50px 30px;
   transition: all 0.3s ease-in-out;
@@ -1213,7 +1213,7 @@ span class="underlight"
   z-index: 1;
 }
 
-.services .service-item:before {
+.projects .service-item:before {
   content: "";
   position: absolute;
   background: var(--accent-color);
@@ -1222,11 +1222,11 @@ span class="underlight"
   z-index: -1;
 }
 
-.services .service-item .icon {
+.projects .service-item .icon {
   margin-bottom: 15px;
 }
 
-.services .service-item .icon i {
+.projects .service-item .icon i {
   color: var(--default-color);
   background-color: var(--accent-color);
   font-size: 24px;
@@ -1239,36 +1239,36 @@ span class="underlight"
   transition: ease-in-out 0.3s;
 }
 
-.services .service-item h4 {
+.projects .service-item h4 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 20px;
   font-family: var(--default-font);
 }
 
-.services .service-item h4 a {
+.projects .service-item h4 a {
   color: var(--heading-color);
   transition: ease-in-out 0.3s;
 }
 
-.services .service-item p {
+.projects .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
   transition: ease-in-out 0.3s;
 }
 
-.services .service-item:hover h4 a,
-.services .service-item:hover p {
+.projects .service-item:hover h4 a,
+.projects .service-item:hover p {
   color: var(--default-color);
 }
 
-.services .service-item:hover i {
+.projects .service-item:hover i {
   color: var(--accent-color);
   background-color: var(--default-color);
 }
 
-.services .service-item:hover:before {
+.projects .service-item:hover:before {
   background: var(--accent-color);
   inset: 0;
   border-radius: 0px;
