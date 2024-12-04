@@ -19,12 +19,12 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #020517; /* Background color for the entire website, including individual sections */
-  --default-color: #fafafa; /* Default color used for the majority of the text content across the entire website */
+  --background-color: #00041c; /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #55118a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1a1a1a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffffdb; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --accent-color: #6a6a6a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #202020; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -795,19 +795,22 @@ section,
 .hero h2 .underlight {
   position: relative;
   z-index: 1;
-  padding: 0 5px;
+  padding: 0 2px;
+  background: linear-gradient(to bottom, #ffffff, --background-color);
+  color: white;
   display: inline-block;
 }
 
-.hero h2 .underlight:before {
+.hero h2 .underlight::before {
   content: "";
   position: absolute;
-  height: 50%;
-  bottom: 0;
+  bottom: 10;
   left: 0;
   right: 0;
-  background: var(--accent-color);
-  z-index: -1;
+  height: 90%;
+  background: linear-gradient(30deg, var(--background-color), var(--accent-color), var(--background-color));
+  z-index: -1; 
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; 
 }
 
 .hero p {
@@ -815,6 +818,154 @@ section,
   margin-bottom: 30px;
   font-size: 18px;
 }
+/* Container for the fading border effect */
+.fade-border {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px; /* Rounded corners, optional */
+  overflow: hidden;
+}
+
+/* Add the border with gradient fade */
+.fade-border::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: inherit;
+  background: linear-gradient(
+      45deg,
+      var(--accent-color),
+      var(--background-color)
+  );
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+/* Ensure image is properly placed */
+.fade-border img {
+  display: block;
+  border-radius: inherit;
+}
+
+/* General layout adjustments */
+.column-scroll {
+  height: 70vh;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.column-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--default-color);
+  margin-bottom: 20px;
+}
+
+.col-md-4{
+  flex: 0 0 50%; /* 2 columns */
+  max-width: 33%;
+}
+
+.gallery-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  max-width: 75%; /* Prevents images from overflowing */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px; /* Increased gap between columns */
+  padding: 20px; /* Padding around the gallery */
+}
+
+/* Gallery item container */
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  overflow: hidden; /* Prevents image from overflowing the container */
+}
+
+
+/* Image container */
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.8s ease-in-out; /* Smooth transition for overall container */
+  width: 70%;
+  text-align: center;
+}
+
+/* Image styling */
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+/* Image hover effect */
+.gallery-image:hover {
+  transform: scale(1.1); /* Expand image on hover */
+}
+
+/* Caption styling */
+.image-caption {
+  font-size: 14px;
+  color: var(--contrast-color);
+  background: linear-gradient(180deg, var(--background-color), var(--accent-color));
+  margin-top: 10px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for caption */
+  margin-bottom: 10px; /* Space between caption and next item */
+  transform: translateY(0); /* Start with caption aligned below the image */
+}
+
+/* Image container hover: scales both image and caption */
+.image-container:hover .image-caption {
+  transform: translateY(-10px); /* Moves the caption along with the image */
+}
+
+/* Scrollable behavior for columns */
+.column-scroll {
+  padding: 0 10px;
+}
+
+.column-scroll::-webkit-scrollbar {
+  padding-right: 30px;
+  width: 8px;
+}
+
+.column-scroll::-webkit-scrollbar-thumb {
+  padding-right: 30px;
+  background: #888;
+  border-radius: 4px;
+}
+
+.column-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
 
 @media (max-width: 768px) {
   .hero h2 {
@@ -824,14 +975,14 @@ section,
 
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: var(--accent-color);
-  font-weight: 400;
-  font-size: 14px;
+  background: linear-gradient(180deg, var(--background-color), var(--accent-color) );
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
   display: inline-block;
-  padding: 12px 40px;
+  padding: 5px 20px;
   border-radius: 4px;
   transition: 0.5s;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
@@ -860,7 +1011,7 @@ section,
   background: rgba(0, 0, 0, 0.6);
   z-index: 3;
 }
-span class="underlight"
+.underlight
 .gallery .gallery-links .preview-link,
 .gallery .gallery-links .details-link {
   font-size: 20px;
