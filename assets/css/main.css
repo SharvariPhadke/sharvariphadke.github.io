@@ -774,6 +774,9 @@ section,
   font-family: var(--heading-font);
 }
 
+.current{
+  color: var(--default-color);
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -946,6 +949,168 @@ section,
 .image-container:hover .image-caption {
   transform: translateY(-10px); /* Moves the caption along with the image */
 }
+.container {
+  margin-top: 50px;
+}
+.list-group {  
+  align-items: center;
+}
+.list-group-item {
+  background-color: linear-gradient(180deg, var(--background-color), var(--accent-color) );
+  width: 17%;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 18px;
+  color: #2400f1;
+  transition: all 0.3s ease;
+}
+.list-group-item:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.list-group-item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.list-group-item a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+.poem-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  flex-wrap: wrap; /* Allow wrapping of cards on smaller screens */
+  gap: 20px; /* Space between poem cards */
+  padding: 20px; /* Padding around the container */
+}
+.poem-card {
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(0deg, var(--background-color), var(--accent-color) );
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.poem-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.poem-title {
+  font-family: 'Cardo', serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--contrast-color); 
+}
+
+.poem-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--contrast-color);
+  white-space: pre-line;
+}
+
+.poem-full {
+  display: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: var(--default-color);
+  margin-top: -20px;
+}
+
+.poem-text.show {
+  display: block;
+}
+
+.expand-button {
+  background-color: var(--nav-dropdown-background-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.expand-button:hover {
+  background-color: var(--background-color);
+}
+
+.page-title {
+  text-align: center;
+  padding: 50px 0;
+  font-family: 'Cardo', serif;
+  font-size: 36px;
+  color: var(--default-color);
+}
+
+/* Card Styling */
+.card { 
+  
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--default-color);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.card-header {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.25rem;
+  padding: 15px;
+  cursor: pointer;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.card-header:hover {
+  background-color: var(--background-color); /* Darken the header background on hover */
+}
+
+.card-body {
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: var(--background-color);
+}
+
+/* Collapse behavior styling */
+.collapse.show {
+  transition: height 0.3s ease;
+}
+
+.card-body p {
+  margin-bottom: 0;
+}
+
+/* Optional: For the title link effect */
+.card-header h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Optional: Adjusting content inside the body */
+.card-body p {
+  color: var(--background-color);
+}
+
+
 
 /* Scrollable behavior for columns */
 .column-scroll {
