@@ -1207,6 +1207,7 @@ section,
 }        
 .media-gallery {
     position: relative;
+    padding: 10px;;
     gap: 10px;
     width: 100%; 
     overflow: hidden;
@@ -1258,6 +1259,38 @@ section,
     margin: 20px;
     text-decoration: none;
     color: var(--default-color);
+}
+.travel-container {
+  display: flex;
+  flex-direction: column; /* Ensure content inside stacks properly */
+  width: 85%; /* Controls the width of the container */
+  margin: 0 auto; /* Fallback centering for certain browsers */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Optional: Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: var(--background-color); 
+  box-shadow: 0px 0 20px var(--accent-color);
+} 
+.travel-content h2 {
+  text-align: center;
+  font-family: 'Georgia', serif; /* Professional serif font for headings */
+  font-size: 1.8rem; /* Larger font size for the title */ 
+  margin-right: 20px;
+  margin-bottom: -30px;
+  color: var(--contrast-color); /* Dark color for good contrast */
+}
+
+.media-item-travel { 
+    position: relative;
+    padding-right: 30px;
+}
+.media-item-travel img,
+.media-item-travel video {  
+    object-fit: contain;
+    border-radius: 8px;
+    height: 400px;
+    box-shadow: 0px 0 20px var(--accent-color);
 }
 
 .gallery .gallery-item {
