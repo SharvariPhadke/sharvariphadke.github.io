@@ -1158,6 +1158,108 @@ section,
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
+.blog-post {
+  display: flex; 
+  /* align-items: center; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} 
+.blog-post-content h2 {
+  text-align: center;
+  font-family: 'Georgia', serif; /* Professional serif font for headings */
+  font-size: 1.8rem; /* Larger font size for the title */ 
+  margin-right: 20px;
+  margin-bottom: 30px;
+  color: var(--contrast-color); /* Dark color for good contrast */
+}
+
+.blog-post-content p {
+  font-family: 'Arial', sans-serif; /* Clean, readable sans-serif font for text */
+  font-size: 1rem; /* Standard font size for body text */
+  line-height: 1.6; /* Improves readability with more line spacing */
+  color: var(--contrast-color); /* Softer text color for paragraphs */
+  text-align: justify;
+  margin-right: 20px;
+}
+.blog-post-container {
+  display: flex;
+  flex-direction: column; /* Ensure content inside stacks properly */
+  width: 50%; /* Controls the width of the container */
+  margin: 0 auto; /* Fallback centering for certain browsers */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Optional: Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: var(--background-color); /* Optional: White background for contrast */
+} 
+.blog-post:hover {
+  background-color: #2a2056; 
+  box-shadow: 4px 4px 6px var(--accent-color); /* Optional: Add a subtle shadow */
+}
+.blog-post img {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.blog-post-content { 
+  margin: 20px 20px 20px 20px ; 
+}        
+.media-gallery {
+    position: relative;
+    gap: 10px;
+    width: 100%; 
+    overflow: hidden;
+}
+.media-scroll {
+    display: flex; 
+    padding: 50px;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+}
+.media-item { 
+    position: relative;
+    padding-right: 30px;
+}
+.media-item img, 
+.media-item video {  
+    object-fit: contain;
+    border-radius: 8px;
+    height: 250px;
+    box-shadow: 0px 0 20px var(--accent-color);
+}
+.nav-arrow {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    background-color: var(--contrast-color);
+    color: var(--background-color);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+.nav-arrow-left {
+    left: 10px;
+}
+.nav-arrow-right {
+    right: 10px;
+}
+.blog-content {
+    padding: 20px;
+}
+.back-link {
+    display: block;
+    margin: 20px;
+    text-decoration: none;
+    color: var(--default-color);
+}
+
 .gallery .gallery-item {
   position: relative;
   overflow: hidden;
