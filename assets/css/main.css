@@ -19,9 +19,9 @@
 
 /* Light Mode Professional Color Palette */
 :root { 
-  --accent-color: #6b9e2c;
+  --accent-color: #75b527;
   --background-color: #FFFFFF; /* Pristine white - clarity and openness */
-  --default-color: #333333; /* Deep charcoal - soft, professional text */
+  --default-color: #2e2e2e; /* Deep charcoal - soft, professional text */
   --heading-color: #111111; /* Near-black for headings - crisp and authoritative */
   /* --accent-color: #2C5F9E; Deep, professional blue - trustworthy and refined */
   --surface-color: #F5F7FA; /* Soft, light gray - subtle depth and separation */
@@ -78,6 +78,7 @@ a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
+
 
 h1,
 h2,
@@ -144,6 +145,14 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+
+#icon-main{
+  color: var(--accent-color); 
+  margin-right: 10px;
+  margin-left: 5px;
+  align-items:center;
+  justify-content: center;
+}
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -659,8 +668,7 @@ h6 {
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
-.breadcrumbs{
-  
+.breadcrumbs{  
   background-color: var(--accent-color);
 }
 .page-title {
@@ -714,15 +722,19 @@ h6 {
   padding-left: 5px; 
 }
 .page-title nav a {
-  color: color-mix(in srgb, var(--background-color), transparent 30%);
-  font-style: italic;
+  color: color-mix(in srgb, var(--background-color), transparent 5%); 
 }
 
 .page-title nav ol li+li::before {
   content: "/";
   display: inline-block;
   padding-right: 5px;
-  color: color-mix(in srgb, var(--background-color), transparent 30%);
+  color: color-mix(in srgb, var(--background-color), transparent 5%);
+}
+
+.current{
+  color: var(--background-color);
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -781,10 +793,6 @@ section,
   font-size: 36px;
   font-weight: 400;
   font-family: var(--heading-font);
-}
-
-.current{
-  color: var(--background-color);
 }
 /*--------------------------------------------------------------
 # Hero Section
@@ -883,19 +891,34 @@ section,
   border: 0.5px solid var(--accent-color); 
   height: 70vh;
   border-radius: 7px;
-  box-shadow: 0 4px 8px var(--default-color);
+  box-shadow: 0 8px 8px var(--lightgrey-color);
   overflow-y: auto; 
 }
 .column-scroll h3 { 
-  height:fit-content;
+  margin-bottom: 5px;
   color: var(--accent-color);
-  text-shadow: 0 0 1px var(--contrast-color);
+  text-shadow: 0 0 2px var(--lightgrey-color);
   text-align: center; 
 }
 .column-scroll p {  
   font-weight: 400;
-  color: var(--contrast-color); 
+  margin-bottom: 30px;
+  color: var(--accent-color); 
   text-align: center; 
+}
+.column-scroll .image-caption{
+  font-size: 12px;
+  color: var(--background-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 10%);
+  border-radius: 5px;
+  margin-top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for caption */
+  margin-bottom: 3px; /* Space between caption and next item */
+  transform: translateY(0); /* Start with caption aligned below the image */
+  
 }
 .column-header {
   font-size: 1.5rem;
@@ -997,28 +1020,39 @@ section,
 .container {
   margin-top: 5px;
 }
+.container p {
+  color: var(--default-color);
+}
+.container h1 {
+  color: var(--default-color);
+}
+
 .list-group {  
+  margin-top: 15px;
   gap: 2px;
-  align-items: center;
+  align-items: center; 
+}
+.container-fluid h2 {  
+  font-weight: bold;
+  text-shadow: 0 4px 4px var(--lightgrey-color);
+  color: var(--accent-color)
 }
 .list-group-item {
   background-color: linear-gradient(180deg, var(--background-color), var(--accent-color) );
   width: 17%;
   text-align: center;
-  border: 1px solid var(--default-color);
+  border: 2px solid var(--accent-color);
   border-radius: 3px;
   padding: 5px;
-  font-size: 20px;
-  color: var(--accent-color);
+  font-size: 15px; 
   transition: all 0.3s ease;
 }
-.list-group-item:hover {
-  background-color: var(--lightgrey-color);
-  box-shadow: 0 4px 8px var(--default-color);
+.list-group-item:hover { 
+  box-shadow: 0 4px 8px var(--lightgrey-color);
 }
 .list-group-item a {
   text-decoration: none;
-  color: var(--contrast-color);
+  color: var(--accent-color);
 }
 .list-group-item a:hover {
   text-decoration: underline; 
@@ -1157,6 +1191,7 @@ section,
 }
 
 .column-scroll::-webkit-scrollbar {
+  margin-right: 10px;
   padding-right: 30px;
   width: 12px;
 }
@@ -1164,11 +1199,15 @@ section,
 .column-scroll::-webkit-scrollbar-thumb {
   padding-right: 30px;
   background: var(--accent-color);
+  box-shadow: 0 5px 8px var(--lightgrey-color);
   border-radius: 4px;
+  
 }
 
 .column-scroll::-webkit-scrollbar-thumb:hover {
-  background: var(--contrast-color);
+  background: var(--lightgrey-color);
+  box-shadow: 0 5px 8px var(--default-color);
+  border-radius: 4px;
 } 
 
 @media (max-width: 768px) {
@@ -1231,7 +1270,7 @@ section,
   background-color: var(--background-color); /* Optional: White background for contrast */
 } 
 .blog-post:hover {
-  background-color: var(--lightgrey-color); 
+  background-color: var(--surface-color); 
   box-shadow: 4px 4px 6px var(--accent-color); /* Optional: Add a subtle shadow */
 }
 .blog-post img {
@@ -1303,12 +1342,13 @@ section,
   flex-direction: column; /* Ensure content inside stacks properly */
   width: 85%; /* Controls the width of the container */
   margin: 0 auto; /* Fallback centering for certain browsers */
+  margin-top: 15px;
   border: 1px solid var(--accent-color);
   border-radius: 8px; /* Optional: Add rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease;
   background-color: var(--background-color); 
-  box-shadow: 0px 0 20px var(--accent-color);
+  box-shadow: 0px 0 20px var(--default-color);
 } 
 .travel-content h2 {
   text-align: center;
@@ -1328,7 +1368,7 @@ section,
     object-fit: contain;
     border-radius: 8px;
     height: 400px;
-    box-shadow: 0px 0 20px var(--accent-color);
+    box-shadow: 0 8px 8px var(--default-color);
 }
 .crochet-container { 
   display: flex;
@@ -1336,11 +1376,12 @@ section,
   justify-content: center; /* Center items horizontally */
   align-items: flex-start; /* Align items to the top */
   gap: 10px; /* Add spacing between flex items */
-  padding: 10px; /* Add padding to the container */
-  width: 90%; /* Adjust the width as needed */
+  padding: 3px; /* Add padding to the container */
+  width: 85%; /* Adjust the width as needed */
   margin: 0 auto; /* Center the container on the page */
-  border: 1px solid var(--accent-color);
-  border-radius: 8px; 
+  margin-top:10px;
+  /* border: 1px solid var(--accent-color); */
+  border-radius: 2px; 
   transition: background-color 0.3s ease;
   background-color: var(--background-color);  
 }
@@ -1636,6 +1677,7 @@ section,
 --------------------------------------------------------------*/
 .projects .service-item {
   background-color: var(--surface-color);
+  box-shadow: 0 4px 8px var(--accent-color);
   padding: 50px 30px;
   transition: all 0.3s ease-in-out;
   height: 100%;
@@ -1700,8 +1742,8 @@ section,
 
 .projects .service-item:hover:before {
   background: var(--accent-color);
-  inset: 0;
-  border-radius: 0px;
+  box-shadow: 2px 4px 8px var(--lightgrey-color);
+  inset: 0; 
 }
 
 /*--------------------------------------------------------------
@@ -1750,9 +1792,9 @@ section,
 .contact .info-item h3 {
   font-size: 18px;
   font-weight: 700;
-  margin: 0 0 5px 0;
+  justify-content: center;
   font-family: var(--default-font);
-}
+} 
 
 .contact .info-item p {
   padding: 0;
@@ -1801,7 +1843,7 @@ section,
   font-weight: 400;
   font-size: 14px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 14px 40px;
   border: 0;
   border-radius: 4px;
