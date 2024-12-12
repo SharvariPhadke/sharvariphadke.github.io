@@ -19,10 +19,11 @@
 
 /* Light Mode Professional Color Palette */
 :root { 
+  --accent-color: #6b9e2c;
   --background-color: #FFFFFF; /* Pristine white - clarity and openness */
   --default-color: #333333; /* Deep charcoal - soft, professional text */
   --heading-color: #111111; /* Near-black for headings - crisp and authoritative */
-  --accent-color: #2C5F9E; /* Deep, professional blue - trustworthy and refined */
+  /* --accent-color: #2C5F9E; Deep, professional blue - trustworthy and refined */
   --surface-color: #F5F7FA; /* Soft, light gray - subtle depth and separation */
   --contrast-color: #000000; /* Pure black for critical contrast */
 }
