@@ -819,8 +819,14 @@ section,
   padding: 5px;
   background: var(--accent-color) ;
   border-radius: 5px;
+  box-shadow: 0 4px 8px var(--lightgrey-color);
   color: var(--background-color);
   /* display: inline-block; */
+}
+
+.hero a {
+  box-shadow: 0 4px 4px var(--lightgrey-color);
+
 }
 
 .hero h2 .underlight::before {
