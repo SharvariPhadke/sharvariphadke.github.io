@@ -1,11 +1,11 @@
-/**
+/** 
 * Template Name: PhotoFolio
-* Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+* Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/ 
 * Updated: Aug 07 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
+ 
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
@@ -545,7 +545,7 @@ h6 {
   right: 0;
 }
 
-#preloader .line {
+#preloader .line {  
   position: relative;
   overflow: hidden;
   margin: auto;
@@ -557,7 +557,7 @@ h6 {
 #preloader .line:before {
   content: "";
   position: absolute;
-  background-color: var(--contrast-color);
+  background-color: var(--accent-color);
   left: 0;
   top: 50%;
   width:5px;
@@ -845,10 +845,15 @@ section,
   margin-bottom: 30px;
   font-size: 18px;
 }
+
+.img-fluid{
+  height:50%;
+}
 /* Container for the fading border effect */
 .fade-border {
   position: relative;
   display: inline-block;
+  height:50%;
   border-radius: 12px; /* Rounded corners, optional */
   overflow: hidden;
 }
@@ -1032,9 +1037,12 @@ section,
 .container h1 {
   color: var(--default-color);
 }
+.img-fluid { 
+  width: 50%;
+  height: auto; 
+}
 
-.list-group {  
-  margin-top: 15px;
+.list-group {   
   gap: 2px;
   align-items: center; 
 }
