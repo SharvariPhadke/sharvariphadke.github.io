@@ -10,31 +10,32 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
-/* Fonts */
+/* Fonts - Professional, Clean, and Readable */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Cardo",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Playfair Display", serif; /* Elegant serif for headings */
+  --nav-font: "Inter", sans-serif; /* Clean, modern sans-serif for navigation */
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Light Mode Professional Color Palette */
 :root { 
-  --background-color: #00041c; /* Background color for the entire website, including individual sections */
-  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #6a6a6a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #202020; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #FFFFFF; /* Pristine white - clarity and openness */
+  --default-color: #333333; /* Deep charcoal - soft, professional text */
+  --heading-color: #111111; /* Near-black for headings - crisp and authoritative */
+  --accent-color: #2C5F9E; /* Deep, professional blue - trustworthy and refined */
+  --surface-color: #F5F7FA; /* Soft, light gray - subtle depth and separation */
+  --contrast-color: #000000; /* Pure black for critical contrast */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Navigation Colors - Professional Light Mode */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.5);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #1a1a1a; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #1a1a1a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: rgba(255, 255, 255, 0.5); /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --lightgrey-color: #c1c1c1;
+  --nav-color: rgba(51, 51, 51, 0.7);  /* Soft charcoal with transparency */
+  --nav-hover-color: #111111; /* Deep black on hover */
+  --nav-mobile-background-color: #F5F7FA; /* Light gray for mobile nav */
+  --nav-dropdown-background-color: #FFFFFF; /* Clean white for dropdowns */
+  --nav-dropdown-color: rgba(51, 51, 51, 0.7); /* Soft charcoal for dropdown links */
+  --nav-dropdown-hover-color: #2C5F9E; /* Accent blue on hover */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -437,7 +438,7 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: var(--nav-dropdown-background-color);
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -450,7 +451,7 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: var(--background-color);
     transition: 0.3s;
   }
 
@@ -520,7 +521,7 @@ h6 {
 #preloader:before,
 #preloader:after {
   content: "";
-  background-color: #000000;
+  background-color: var(--background-color);
   position: absolute;
   inset: 0;
   width: 50%;
@@ -538,18 +539,18 @@ h6 {
   position: relative;
   overflow: hidden;
   margin: auto;
-  width: 1px;
-  height: 280px;
-  transition: all 0.8s ease 0s;
+  width: 3px;
+  height: 300px;
+  transition: all 0.4s ease 0s;
 }
 
 #preloader .line:before {
   content: "";
   position: absolute;
-  background-color: #ffffff;
+  background-color: var(--contrast-color);
   left: 0;
   top: 50%;
-  width: 1px;
+  width:5px;
   height: 0%;
   transform: translateY(-50%);
   animation: lineincrease 1000ms ease-in-out 0s forwards;
@@ -657,15 +658,18 @@ h6 {
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
+.breadcrumbs{
+  
+  background-color: var(--accent-color);
+}
 .page-title {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--background-color);
+  background-color: var(--accent-color);
   position: relative;  
-  padding-bottom: 20px;
 }
 
 .page-title .heading { 
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-top: 1px solid color-mix(in srgb, var(--background-color), transparent 80%);
 }
 
 .page-title .heading h1 {
@@ -674,7 +678,7 @@ h6 {
 }
 
 .page-title .heading .cta-btn {
-  color: var(--default-color);
+  color: var(--background-color);
   background: var(--accent-color);
   font-weight: 400;
   font-size: 14px;
@@ -692,7 +696,7 @@ h6 {
 }
 
 .page-title nav {
-  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 80%);
   padding: 5px 0;
 }
 
@@ -709,7 +713,7 @@ h6 {
   padding-left: 5px; 
 }
 .page-title nav a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--background-color), transparent 30%);
   font-style: italic;
 }
 
@@ -717,7 +721,7 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 5px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--background-color), transparent 30%);
 }
 
 /*--------------------------------------------------------------
@@ -779,7 +783,7 @@ section,
 }
 
 .current{
-  color: var(--default-color);
+  color: var(--background-color);
 }
 /*--------------------------------------------------------------
 # Hero Section
@@ -790,22 +794,24 @@ section,
   position: relative;
   padding: 120px 0 60px 0;
   display: flex;
+  cursor: context-menu;
   align-items: center;
 }
 
 .hero h2 {
   margin: 0 0 10px 0;
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .hero h2 .underlight {
   position: relative;
   z-index: 1;
-  padding: 0 2px;
-  background: linear-gradient(to bottom, #ffffff, --background-color);
-  color: white;
-  display: inline-block;
+  padding: 5px;
+  background: var(--accent-color) ;
+  border-radius: 5px;
+  color: var(--background-color);
+  /* display: inline-block; */
 }
 
 .hero h2 .underlight::before {
@@ -814,8 +820,7 @@ section,
   bottom: 10;
   left: 0;
   right: 0;
-  height: 90%;
-  background: linear-gradient(30deg, var(--background-color), var(--accent-color), var(--background-color));
+  height: 90%; 
   z-index: -1; 
   transition: transform 0.5s ease-out, opacity 0.5s ease-out; 
 }
@@ -859,12 +864,38 @@ section,
 }
 
 /* General layout adjustments */
-.column-scroll {
-  height: 70vh;
-  overflow-y: auto;
-  padding: 15px;
+.row{
+  gap:12px; 
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 
+#gallery {
+  display: flex;
+  justify-content: center; 
+  min-height: 100vh; /* This ensures full viewport height */
+  padding: 10px 0; /* Reduced vertical padding */ 
+}
+
+.column-scroll {
+  border: 0.5px solid var(--accent-color); 
+  height: 70vh;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px var(--default-color);
+  overflow-y: auto; 
+}
+.column-scroll h3 { 
+  height:fit-content;
+  color: var(--accent-color);
+  text-shadow: 0 0 1px var(--contrast-color);
+  text-align: center; 
+}
+.column-scroll p {  
+  font-weight: 400;
+  color: var(--contrast-color); 
+  text-align: center; 
+}
 .column-header {
   font-size: 1.5rem;
   font-weight: 600;
@@ -873,9 +904,10 @@ section,
 }
 
 .col-md-4{
-  flex: 0 0 50%; /* 2 columns */
-  max-width: 33%;
-}
+  flex: 0 0 45%; /* 2 columns */
+  width: auto;
+  max-width: 32%;
+} 
 
 .gallery-items {
   display: flex;
@@ -897,7 +929,7 @@ section,
 
 .gallery-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0px; /* Increased gap between columns */
   padding: 20px; /* Padding around the gallery */
 }
@@ -906,11 +938,15 @@ section,
 .gallery-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
+  align-items: center; 
   overflow: hidden; /* Prevents image from overflowing the container */
 }
 
+.glightbox{
+  display: flex;  
+  justify-content: center;
+
+}
 
 /* Image container */
 .image-container {
@@ -918,6 +954,7 @@ section,
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   transition: transform 0.8s ease-in-out; /* Smooth transition for overall container */
   width: 70%;
   text-align: center;
@@ -939,13 +976,16 @@ section,
 
 /* Caption styling */
 .image-caption {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--contrast-color);
-  background: linear-gradient(180deg, var(--background-color), var(--accent-color));
-  margin-top: 10px;
+  background: var(--lightgrey-color);
+  border-radius: 5px;
+  margin-top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
   opacity: 1;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for caption */
-  margin-bottom: 10px; /* Space between caption and next item */
+  margin-bottom: 3px; /* Space between caption and next item */
   transform: translateY(0); /* Start with caption aligned below the image */
 }
 
@@ -954,33 +994,34 @@ section,
   transform: translateY(-10px); /* Moves the caption along with the image */
 }
 .container {
-  margin-top: 50px;
+  margin-top: 5px;
 }
 .list-group {  
+  gap: 2px;
   align-items: center;
 }
 .list-group-item {
   background-color: linear-gradient(180deg, var(--background-color), var(--accent-color) );
   width: 17%;
   text-align: center;
-  border: 1px solid var(--accent-color);
-  border-radius: 8px;
-  padding: 15px;
-  font-size: 18px;
-  color: #2400f1;
+  border: 1px solid var(--default-color);
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 20px;
+  color: var(--accent-color);
   transition: all 0.3s ease;
 }
 .list-group-item:hover {
-  background-color: var(--accent-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--lightgrey-color);
+  box-shadow: 0 4px 8px var(--default-color);
 }
 .list-group-item a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--contrast-color);
 }
 .list-group-item a:hover {
-  text-decoration: underline;
-  color: #ffffff;
+  text-decoration: underline; 
+  
 }
 .poem-container {
   display: flex;
@@ -1111,22 +1152,22 @@ section,
 
 /* Scrollable behavior for columns */
 .column-scroll {
-  padding: 0 10px;
+  padding: 2px;
 }
 
 .column-scroll::-webkit-scrollbar {
   padding-right: 30px;
-  width: 8px;
+  width: 12px;
 }
 
 .column-scroll::-webkit-scrollbar-thumb {
   padding-right: 30px;
-  background: #888;
+  background: var(--accent-color);
   border-radius: 4px;
 }
 
 .column-scroll::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--contrast-color);
 } 
 
 @media (max-width: 768px) {
@@ -1136,20 +1177,19 @@ section,
 }
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: linear-gradient(180deg, var(--background-color), var(--accent-color) );
-  font-style: italic;
+  background: var(--accent-color) ;
+  border-radius: 5px;
+  color: var(--background-color);  
   font-weight: 500;
   font-size: 15px;
   display: inline-block;
-  padding: 5px 20px;
-  border-radius: 4px;
+  padding: 5px; 
   transition: 0.5s;
   letter-spacing: 1px;
 }
 
 .hero .btn-get-started:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+  background-color: color-mix(in srgb, var(--accent-color) 70%, var(--background-color) 30%);
 }
 
 /*--------------------------------------------------------------
@@ -1190,7 +1230,7 @@ section,
   background-color: var(--background-color); /* Optional: White background for contrast */
 } 
 .blog-post:hover {
-  background-color: #2a2056; 
+  background-color: var(--lightgrey-color); 
   box-shadow: 4px 4px 6px var(--accent-color); /* Optional: Add a subtle shadow */
 }
 .blog-post img {
@@ -1349,7 +1389,7 @@ section,
   border-radius: 8px;
   box-shadow: 0px 0 10px var(--accent-color);
   display: block;
-}
+} 
 
 .gallery .gallery-item {
   position: relative;
@@ -1357,6 +1397,10 @@ section,
   border-radius: 10px;
 }
 
+.gallery .gallery-item a {
+  width: auto;
+
+}
 .gallery .gallery-item img {
   transition: 0.3s;
 }
@@ -1381,7 +1425,7 @@ section,
 
 .gallery .gallery-links .preview-link:hover,
 .gallery .gallery-links .details-link:hover {
-  color: #ffffff;
+  color: var(--background-color);
 }
 
 .gallery .gallery-links .details-link {
@@ -1403,136 +1447,12 @@ section,
 }
 
 .glightbox-clean .gslide-description {
-  background: #272727;
+  background: var(--contrast-color);
 }
 
 .glightbox-clean .gslide-title {
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
-}
-
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
-}
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.about .content ul strong {
-  margin-right: 10px;
-}
-
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: var(--accent-color);
-  line-height: 0;
-}
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials .testimonial-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
-  box-sizing: content-box;
-  padding: 30px;
-  margin: 40px 30px;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.testimonials .testimonial-item .stars {
-  margin-bottom: 15px;
-}
-
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  border: 4px solid var(--background-color);
-  margin: 0 auto;
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-}
-
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0;
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 auto 15px auto;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-.testimonials .swiper-slide {
-  opacity: 0.3;
-}
-
-@media (max-width: 1199px) {
-  .testimonials .swiper-slide-active {
-    opacity: 1;
-  }
-
-  .testimonials .swiper-pagination {
-    margin-top: 0;
-  }
-
-  .testimonials .testimonial-item {
-    margin: 40px 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonials .swiper-slide-next {
-    opacity: 1;
-    transform: scale(1.12);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -1568,7 +1488,7 @@ section,
 
 .gallery-details .swiper-button-prev:hover:after,
 .gallery-details .swiper-button-next:hover:after {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--contrast-color);
 }
 
 @media (max-width: 575px) {
@@ -1679,7 +1599,7 @@ section,
 
 .gallery-details .portfolio-description .testimonial-item h4 {
   font-size: 14px;
-  color: #6c757d;
+  color: var(--lightgrey-color);
   margin: 0;
 }
 
