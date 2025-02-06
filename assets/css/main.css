@@ -1,16 +1,3 @@
-/** 
-* Template Name: PhotoFolio
-* Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/ 
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
- 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts - Professional, Clean, and Readable */
 :root {
   --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Playfair Display", serif; /* Elegant serif for headings */
@@ -19,7 +6,8 @@
 
 /* Light Mode Professional Color Palette */
 :root { 
-  --accent-color: #75b527;
+  --accent-color: #002D55;
+  /* --accent-color: #75b527; */
   --background-color: #FFFFFF; /* Pristine white - clarity and openness */
   --default-color: #2e2e2e; /* Deep charcoal - soft, professional text */
   --heading-color: #111111; /* Near-black for headings - crisp and authoritative */
@@ -813,31 +801,10 @@ section,
   font-weight: 500;
 }
 
-.hero h2 .underlight {
-  position: relative;
-  z-index: 1;
-  padding: 5px;
-  background: var(--accent-color) ;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px var(--lightgrey-color);
-  color: var(--background-color);
-  /* display: inline-block; */
-}
 
 .hero a {
   box-shadow: 0 4px 4px var(--lightgrey-color);
 
-}
-
-.hero h2 .underlight::before {
-  content: "";
-  position: absolute;
-  bottom: 10;
-  left: 0;
-  right: 0;
-  height: 90%; 
-  z-index: -1; 
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out; 
 }
 
 .hero p {
@@ -846,9 +813,6 @@ section,
   font-size: 18px;
 }
 
-.img-fluid{
-  height:50%;
-}
 /* Container for the fading border effect */
 .fade-border {
   position: relative;
@@ -891,6 +855,7 @@ section,
   align-items: stretch;
 }
 
+
 #gallery {
   display: flex;
   justify-content: center; 
@@ -898,84 +863,11 @@ section,
   padding: 10px 0; /* Reduced vertical padding */ 
 }
 
-.column-scroll {
-  border: 0.5px solid var(--accent-color); 
-  height: 70vh;
-  border-radius: 7px;
-  box-shadow: 0 8px 8px var(--lightgrey-color);
-  overflow-y: auto; 
-}
-.column-scroll h3 { 
-  margin-bottom: 5px;
-  color: var(--accent-color);
-  text-shadow: 0 0 2px var(--lightgrey-color);
-  text-align: center; 
-}
-.column-scroll p {  
-  font-weight: 400;
-  margin-bottom: 30px;
-  color: var(--accent-color); 
-  text-align: center; 
-}
-.column-scroll .image-caption{
-  font-size: 12px;
-  color: var(--background-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 10%);
-  border-radius: 5px;
-  margin-top: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for caption */
-  margin-bottom: 3px; /* Space between caption and next item */
-  transform: translateY(0); /* Start with caption aligned below the image */
-  
-}
-.column-header {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--default-color);
-  margin-bottom: 20px;
-}
-
 .col-md-4{
   flex: 0 0 45%; /* 2 columns */
   width: auto;
   max-width: 32%;
 } 
-
-.gallery-items {
-  display: flex;
-  flex-direction: column;
-}
-
-.gallery-item {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  max-width: 75%; /* Prevents images from overflowing */
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.gallery-container {
-  display: flex;
-  justify-content: center;
-  gap: 0px; /* Increased gap between columns */
-  padding: 20px; /* Padding around the gallery */
-}
-
-/* Gallery item container */
-.gallery-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  overflow: hidden; /* Prevents image from overflowing the container */
-}
 
 .glightbox{
   display: flex;  
@@ -995,39 +887,6 @@ section,
   text-align: center;
 }
 
-/* Image styling */
-.gallery-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: contain; /* Maintain aspect ratio */
-  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
-}
-
-/* Image hover effect */
-.gallery-image:hover {
-  transform: scale(1.1); /* Expand image on hover */
-}
-
-/* Caption styling */
-.image-caption {
-  font-size: 12px;
-  color: var(--contrast-color);
-  background: var(--lightgrey-color);
-  border-radius: 5px;
-  margin-top: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for caption */
-  margin-bottom: 3px; /* Space between caption and next item */
-  transform: translateY(0); /* Start with caption aligned below the image */
-}
-
-/* Image container hover: scales both image and caption */
-.image-container:hover .image-caption {
-  transform: translateY(-10px); /* Moves the caption along with the image */
-}
 .container {
   margin-top: 5px;
 }
@@ -1037,10 +896,10 @@ section,
 .container h1 {
   color: var(--default-color);
 }
-.img-fluid { 
+/* .img-fluid { 
   width: 50%;
   height: auto; 
-}
+} */
 
 .list-group {   
   gap: 2px;
@@ -1199,51 +1058,10 @@ section,
 
 
 
-/* Scrollable behavior for columns */
-.column-scroll {
-  padding: 2px;
-}
-
-.column-scroll::-webkit-scrollbar {
-  margin-right: 10px;
-  padding-right: 30px;
-  width: 12px;
-}
-
-.column-scroll::-webkit-scrollbar-thumb {
-  padding-right: 30px;
-  background: var(--accent-color);
-  box-shadow: 0 5px 8px var(--lightgrey-color);
-  border-radius: 4px;
-  
-}
-
-.column-scroll::-webkit-scrollbar-thumb:hover {
-  background: var(--lightgrey-color);
-  box-shadow: 0 5px 8px var(--default-color);
-  border-radius: 4px;
-} 
-
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
-}
-
-.hero .btn-get-started {
-  background: var(--accent-color) ;
-  border-radius: 5px;
-  color: var(--background-color);  
-  font-weight: 500;
-  font-size: 15px;
-  display: inline-block;
-  padding: 5px; 
-  transition: 0.5s;
-  letter-spacing: 1px;
-}
-
-.hero .btn-get-started:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 70%, var(--background-color) 30%);
 }
 
 /*--------------------------------------------------------------
@@ -1252,7 +1070,7 @@ section,
 .blog-post {
   display: flex; 
   /* align-items: center; */
-  cursor: pointer;
+  cursor: pointer; 
   transition: background-color 0.3s ease;
 } 
 .blog-post-content h2 {
@@ -1692,79 +1510,6 @@ section,
   padding: 0;
 }
 
-/*--------------------------------------------------------------
-# projects Section
---------------------------------------------------------------*/
-.projects .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0 4px 8px var(--accent-color);
-  padding: 50px 30px;
-  transition: all 0.3s ease-in-out;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.projects .service-item:before {
-  content: "";
-  position: absolute;
-  background: var(--accent-color);
-  inset: 100% 0 0 0;
-  transition: all 0.3s;
-  z-index: -1;
-}
-
-.projects .service-item .icon {
-  margin-bottom: 15px;
-}
-
-.projects .service-item .icon i {
-  color: var(--default-color);
-  background-color: var(--accent-color);
-  font-size: 24px;
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: ease-in-out 0.3s;
-}
-
-.projects .service-item h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-family: var(--default-font);
-}
-
-.projects .service-item h4 a {
-  color: var(--heading-color);
-  transition: ease-in-out 0.3s;
-}
-
-.projects .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-  transition: ease-in-out 0.3s;
-}
-
-.projects .service-item:hover h4 a,
-.projects .service-item:hover p {
-  color: var(--default-color);
-}
-
-.projects .service-item:hover i {
-  color: var(--accent-color);
-  background-color: var(--default-color);
-}
-
-.projects .service-item:hover:before {
-  background: var(--accent-color);
-  box-shadow: 2px 4px 8px var(--lightgrey-color);
-  inset: 0; 
-}
 
 /*--------------------------------------------------------------
 # Pricing Section

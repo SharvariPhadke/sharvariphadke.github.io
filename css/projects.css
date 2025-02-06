@@ -1,0 +1,74 @@
+
+/*--------------------------------------------------------------
+# projects Section
+--------------------------------------------------------------*/
+.projects .service-item {
+    background-color: var(--surface-color);
+    box-shadow: 0 4px 8px var(--accent-color);
+    padding: 50px 30px;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .projects .service-item:before {
+    content: "";
+    position: absolute;
+    background: var(--accent-color);
+    inset: 100% 0 0 0;
+    transition: all 0.3s;
+    z-index: -1;
+  }
+  
+  .projects .service-item .icon {
+    margin-bottom: 15px;
+  }
+  
+  .projects .service-item .icon i {
+    color: var(--default-color);
+    background-color: var(--accent-color);
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .projects .service-item h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: var(--default-font);
+  }
+  
+  .projects .service-item h4 a {
+    color: var(--heading-color);
+    transition: ease-in-out 0.3s;
+  }
+  
+  .projects .service-item p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .projects .service-item:hover h4 a,
+  .projects .service-item:hover p {
+    color: var(--background-color);
+  }
+  
+  .projects .service-item:hover i {
+    color: var(--accent-color);
+    background-color: var(--background-color);
+  }
+  
+  .projects .service-item:hover:before {
+    background: var(--accent-color);
+    box-shadow: 2px 4px 8px var(--lightgrey-color);
+    inset: 0; 
+  }

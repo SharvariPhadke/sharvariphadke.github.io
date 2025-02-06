@@ -1,0 +1,121 @@
+
+/* Image styling */
+.gallery-image {
+    width: 100%;
+    height: auto; 
+    object-fit: contain; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+  }
+  
+  /* Image hover effect */
+  .gallery-image:hover {
+    transform: scale(1.1); /* Expand image on hover */
+  }
+  
+  /* Caption styling */
+  .image-caption {
+    font-size: 12px;
+    color: var(--contrast-color);
+    background: var(--lightgrey-color);
+    border-radius: 5px;
+    margin-top: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for caption */
+    margin-bottom: 3px; /* Space between caption and next item */
+    transform: translateY(0); /* Start with caption aligned below the image */
+  }
+   
+.gallery-items {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    max-width: 75%; /* Prevents images from overflowing */
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 0px; /* Increased gap between columns */
+    padding: 20px; /* Padding around the gallery */
+  }
+  
+  /* Gallery item container */
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    overflow: hidden; /* Prevents image from overflowing the container */
+  }
+  
+  /* Scrollable behavior for columns */
+.column-scroll {
+    padding: 2px;
+  }
+  
+  .column-scroll::-webkit-scrollbar {
+    margin-right: 10px;
+    padding-right: 30px;
+    width: 12px;
+  }
+  
+  .column-scroll::-webkit-scrollbar-thumb {
+    padding-right: 30px;
+    background: var(--accent-color);
+    box-shadow: 0 3px 5px var(--lightgrey-color);
+    border-radius: 4px;
+    
+  }
+  
+  .column-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--default-color); 
+    border-radius: 4px;
+  } 
+  
+
+.column-scroll {
+    /* border: 0.5px solid var(--accent-color);  */
+    height: 70vh;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px var(--lightgrey-color);
+    overflow-y: auto; 
+  }
+  .column-scroll h3 { 
+    margin-bottom: 5px;
+    color: var(--accent-color);
+    text-shadow: 0 0 2px var(--lightgrey-color);
+    text-align: center; 
+  }
+  .column-scroll p {  
+    font-weight: 400; 
+    color: var(--accent-color); 
+    text-align: center; 
+  }
+  .column-scroll .image-caption{
+    display: flex;
+    font-size: 12px;
+    color: var(--background-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 10%);
+    border-radius: 5px;
+    margin-top: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for caption */
+    margin-bottom: 5rem; /* Space between caption and next item */
+    transform: translateY(0); /* Start with caption aligned below the image */
+    
+  }
+  .column-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--default-color);
+    margin-bottom: 20px;
+  }

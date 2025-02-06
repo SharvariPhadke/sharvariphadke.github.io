@@ -1,0 +1,56 @@
+
+.my-info {
+    display: flex; 
+    max-width: 1200px;
+    min-height: 40vh;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 4rem);
+    border: 2px solid var(--accent-color);
+    border-radius: 2px; 
+    align-items: stretch;
+  }
+  
+  .description{
+    font-family: 'Georgia', serif;
+    text-align: justify;
+    line-height: 1.6; 
+    padding: 0rem 3rem 0 1rem ;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+  }
+  
+  .photos {
+    display: flex;  
+    cursor: pointer;
+    height: auto;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  } 
+  
+.hero .btn-get-started {
+    background: var(--background-color) ;
+    border-radius: 5px;
+    color: var(--accent-color);  
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-block;
+    padding: 5px; 
+    transition: 0.5s;
+    letter-spacing: 1px;
+  }
+  
+  .hero .btn-get-started:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color)
+  }
+  .hero h2 .underlight {
+    font-family: 'Georgia', serif;
+    display: inline-block; 
+    font-size: 28px;
+    z-index: 1;
+    padding: 5px 10px 5px 10px;
+    background: var(--surface-color) ;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px var(--lightgrey-color);
+    color: var(--accent-color); 
+  } 
