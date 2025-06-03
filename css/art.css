@@ -3,6 +3,7 @@
 .gallery-image {
     width: 100%;
     height: auto; 
+    aspect-ratio: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Maintain aspect ratio */
     transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
   }
@@ -14,7 +15,7 @@
   
   /* Caption styling */
   .image-caption {
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     color: var(--contrast-color);
     background: var(--lightgrey-color);
     border-radius: 5px;
@@ -27,15 +28,24 @@
     transform: translateY(0); /* Start with caption aligned below the image */
   }
    
+  /* Gallery item container */
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    overflow: hidden; /* Prevents image from overflowing the container */
+    max-height: 600px;
+    margin-bottom: 2rem;
+  }
+
 .gallery-items {
     display: flex;
     flex-direction: column;
   }
   
   .gallery-item img {
-    width: 100%;
-    height: 100%;
-    max-width: 75%; /* Prevents images from overflowing */
+    width: 100%; 
+    max-width: 100%; /* Prevents images from overflowing */
     border-radius: 8px;
     cursor: pointer;
   }
@@ -50,18 +60,11 @@
     padding: 20px; /* Padding around the gallery */
   }
   
-  /* Gallery item container */
-  .gallery-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    overflow: hidden; /* Prevents image from overflowing the container */
-  }
   
   /* Scrollable behavior for columns */
 .column-scroll {
   height: auto; /* Changed from 70vh */
-  padding: 2px;
+  padding: 15px;
 }
   
   .column-scroll::-webkit-scrollbar {
@@ -92,19 +95,21 @@
     overflow-y: auto; 
   }
   .column-scroll h3 { 
+    font-size: clamp(18px, 2vw, 24px);
     margin-bottom: 5px;
     color: var(--accent-color);
     text-shadow: 0 0 2px var(--lightgrey-color);
     text-align: center; 
   }
   .column-scroll p {  
+    font-size: clamp(14px, 1.5vw, 16px);
     font-weight: 400; 
     color: var(--accent-color); 
     text-align: center; 
   }
   .column-scroll .image-caption{
-    display: flex;
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
+    display: flex; 
     color: var(--background-color);
     background: color-mix(in srgb, var(--accent-color), transparent 10%);
     border-radius: 5px;
@@ -118,13 +123,16 @@
     
   }
   .column-header {
-    font-size: 1.5rem;
+    font-size: clamp(20px, 2.5vw, 24px);
     font-weight: 600;
     color: var(--default-color);
     margin-bottom: 20px;
   }
 
   @media screen and (max-width: 768px) {
+    .gallery-item {
+      max-height: 400px;
+  }
     .column-scroll {
         margin-bottom: 30px;
     }
