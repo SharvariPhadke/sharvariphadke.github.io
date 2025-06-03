@@ -3,7 +3,7 @@
 .gallery-image {
     width: 100%;
     height: auto; 
-    aspect-ratio: auto; /* Maintain aspect ratio */
+    aspect-ratio: initial; /* Maintain aspect ratio */
     object-fit: contain; /* Maintain aspect ratio */
     transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
   }
@@ -53,8 +53,15 @@
   .gallery-image:hover {
     transform: scale(1.05); /* Reduced from 1.1 for mobile */
 }
+
+  .gallery-image:hover {
+    transform: scale(1.05); /* Reduced from 1.1 for mobile */
+}
   .gallery-container {
     display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: center;
     gap: 0px; /* Increased gap between columns */
     padding: 20px; /* Padding around the gallery */
@@ -64,7 +71,7 @@
   /* Scrollable behavior for columns */
 .column-scroll {
   height: auto; /* Changed from 70vh */
-  padding: 15px;
+  padding: 2px;
 }
   
   .column-scroll::-webkit-scrollbar {
@@ -130,8 +137,22 @@
   }
 
   @media screen and (max-width: 768px) {
-    .gallery-item {
-      max-height: 400px;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .col-md-4 {
+      width: 50%;  /* Make first two columns take 50% each */
+  }
+
+  .col-md-4:last-child {
+      width: 100%;  /* Make third column full width */
+      margin-top: 30px;
+  }
+
+  .gallery-item {
+      max-height: none;  /* Remove max-height restriction */
   }
     .column-scroll {
         margin-bottom: 30px;
@@ -144,4 +165,12 @@
     .image-caption {
         margin-bottom: 2rem; /* Reduced from 5rem */
     }
+    
 }
+
+/* Add larger screen layout */
+@media screen and (min-width: 769px) {
+  .col-md-4 {
+      width: 33.333%;  /* Three equal columns on desktop */
+  }
+  }
