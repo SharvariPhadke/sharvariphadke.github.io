@@ -19,7 +19,27 @@
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
+  // Responsive website
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('.navmenu');
   
+  mobileNavToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      mobileNavToggle.classList.toggle('bi-list');
+      mobileNavToggle.classList.toggle('bi-x');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+      if (!navMenu.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+          navMenu.classList.remove('active');
+          mobileNavToggle.classList.remove('bi-x');
+          mobileNavToggle.classList.add('bi-list');
+      }
+  });
+});
+
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 

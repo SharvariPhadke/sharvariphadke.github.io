@@ -1,3 +1,43 @@
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+    margin-top: 0 !important;
+  }
+
+  .my-info {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image-container {
+    width: 80%;
+    margin: 0 auto 30px;
+  }
+
+  .photos {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .description {
+    font-size: 16px;
+    padding: 0 15px;
+    margin-top: 20px;
+  }
+
+  .btn-get-started {
+    margin-top: 20px;
+    padding: 8px 25px;
+  }
+
+  .header {
+    padding: 15px 0;
+  }
+
+  .sitename {
+    font-size: 20px;
+  }
+}
 
 .my-info {
     display: flex; 
@@ -9,8 +49,20 @@
     border-radius: 2px; 
     align-items: stretch;
   }
+
+  .image-container {
+    flex: 0 0 auto;
+    max-width: 400px;
+}
+
+.content-container {
+    flex: 1 1 auto;
+    text-align: center;
+}
   
   .description{
+    margin: 20px 0;
+    line-height: 1.6;
     font-family: 'Georgia', serif;
     text-align: justify;
     line-height: 1.6; 
@@ -26,6 +78,10 @@
     width: 100%;
     transition: background-color 0.3s ease;
   } 
+
+  .cta-container {
+    margin-top: 30px;
+}
   
 .hero .btn-get-started {
     background: var(--background-color) ;
