@@ -53,6 +53,10 @@
   .gallery-image:hover {
     transform: scale(1.05); /* Reduced from 1.1 for mobile */
 }
+
+  .gallery-image:hover {
+    transform: scale(1.05); /* Reduced from 1.1 for mobile */
+}
   .gallery-container {
     display: flex;
     justify-content: center;
@@ -64,7 +68,7 @@
   /* Scrollable behavior for columns */
 .column-scroll {
   height: auto; /* Changed from 70vh */
-  padding: 15px;
+  padding: 2px;
 }
   
   .column-scroll::-webkit-scrollbar {
@@ -130,9 +134,6 @@
   }
 
   @media screen and (max-width: 768px) {
-    .gallery-item {
-      max-height: 400px;
-  }
     .column-scroll {
         margin-bottom: 30px;
     }
