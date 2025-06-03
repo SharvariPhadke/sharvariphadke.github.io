@@ -39,7 +39,10 @@
     border-radius: 8px;
     cursor: pointer;
   }
-  
+
+  .gallery-image:hover {
+    transform: scale(1.05); /* Reduced from 1.1 for mobile */
+}
   .gallery-container {
     display: flex;
     justify-content: center;
@@ -57,8 +60,9 @@
   
   /* Scrollable behavior for columns */
 .column-scroll {
-    padding: 2px;
-  }
+  height: auto; /* Changed from 70vh */
+  padding: 2px;
+}
   
   .column-scroll::-webkit-scrollbar {
     margin-right: 10px;
@@ -119,3 +123,17 @@
     color: var(--default-color);
     margin-bottom: 20px;
   }
+
+  @media screen and (max-width: 768px) {
+    .column-scroll {
+        margin-bottom: 30px;
+    }
+    
+    .gallery-image:hover {
+        transform: none;
+    }
+    
+    .image-caption {
+        margin-bottom: 2rem; /* Reduced from 5rem */
+    }
+}
