@@ -53,6 +53,11 @@
   .gallery-image:hover {
     transform: scale(1.05); /* Reduced from 1.1 for mobile */
 }
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.05); /* Reduced from 1.1 for mobile */
+}
 
   .gallery-image:hover {
     transform: scale(1.05); /* Reduced from 1.1 for mobile */
